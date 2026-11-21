@@ -2,7 +2,7 @@ handle: "hdl:cap:security:os_confinement:0001"
 id: "CAP.SECURITY.OS_CONFINEMENT"
 version: "0.0.1"
 kind: "CAPABILITY"
-domain: "SYS.SECURITY.CONFINEMENT"
+domain: "SECURITY.OS_CONFINEMENT"
 status: "DRAFT"
 phase: "P0_START"
 criticality: "CRITICAL"
@@ -10,13 +10,6 @@ operational_impact: "HIGH"
 
 purpose: >-
   Exprimer un confinement OS portable sans dépendre d'un moteur d'enforcement particulier.
-
-principles:
-  policy_authority: "DATACRAFT"
-  external_engines_are_core: false
-  fail_closed_supported: true
-  unknown_is_supported: false
-  enforcement_before_execution: true
 
 domains:
   - filesystem
@@ -34,23 +27,3 @@ support_states:
   - UNSUPPORTED
   - UNKNOWN
   - NOT_APPLICABLE
-
-modes:
-  - AUDIT
-  - ENFORCE
-  - SAFE_MODE
-  - DISABLED
-
-contract:
-  required_operations:
-    - DiscoverHost
-    - ValidateRequest
-    - ResolvePolicy
-    - CompilePolicy
-    - ValidateCompiledPolicy
-    - ApplyPolicy
-    - VerifyEnforcement
-    - ObserveEnforcement
-    - ReconcileEnforcement
-    - RevokePolicy
-    - ExplainDecision
