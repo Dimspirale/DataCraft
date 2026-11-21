@@ -1,0 +1,73 @@
+{
+  "$schema": "https://<scrubbed-url-domain>/draft/2020-12/schema",
+  "$id": "datacraft://schema/capability/v0.0.1",
+  "title": "DataCraft CAPABILITY",
+  "type": "object",
+  "required": [
+    "handle",
+    "id",
+    "version",
+    "kind",
+    "status",
+    "phase",
+    "purpose"
+  ],
+  "properties": {
+    "handle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "const": "CAPABILITY"
+    },
+    "domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phase": {
+      "type": "string",
+      "minLength": 1
+    },
+    "criticality": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operational_impact": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domains": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "support_states": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": false
+}
