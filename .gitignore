@@ -14,6 +14,12 @@ logs/
 __pycache__/
 *.py[cod]
 .venv/
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
 .idea/
 .DS_Store
+
+# DataCraft local validation results
+.datacraft/validation/

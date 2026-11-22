@@ -1,0 +1,67 @@
+{
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.formatOnSave": false,
+  "editor.rulers": [
+    100
+  ],
+  "editor.renderWhitespace": "boundary",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "python.analysis.typeCheckingMode": "basic",
+  "python.terminal.activateEnvironment": true,
+  "python.testing.unittestEnabled": true,
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "tests",
+    "-p",
+    "test_*.py"
+  ],
+  "yaml.validate": true,
+  "yaml.format.enable": true,
+  "yaml.schemaStore.enable": true,
+  "yaml.schemas": {
+    "./schemas/core.schema.json": [
+      "model/core.yaml",
+      "tests/fixtures/core.valid.yaml",
+      "tests/fixtures/core.invalid-legacy-type.yaml"
+    ]
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "yaml": true,
+    "json": true,
+    "python": true,
+    "xml": true
+  },
+  "github.copilot.chat.codesearch.enabled": false,
+  "github.copilot.chat.copilotDebugCommand.enabled": true,
+  "github.copilot.chat.tools.viewImage.enabled": true,
+  "github.copilot.chat.anthropic.contextEditing.mode": "off",
+  "github.copilot.chat.anthropic.tools.websearch.enabled": false,
+  "github.copilot.chat.githubMcpServer.channel": "stable",
+  "github.copilot.chat.githubMcpServer.enabled": false,
+  "github.copilot.chat.githubMcpServer.readonly": true,
+  "github.copilot.chat.agent.currentEditorContext.enabled": true,
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "github.copilot.chat.customInstructionsInSystemMessage": true,
+  "github.copilot.chat.imageUpload.enabled": true,
+  "github.copilot.chat.setupTests.enabled": true,
+  "github.copilot.chat.summarizeAgentConversationHistory.enabled": true,
+  "github.copilot.chat.localIndex.enabled": true,
+  "github.copilot.chat.reviewAgent.enabled": true,
+  "github.copilot.chat.reviewSelection.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.nextEditSuggestions.allowWhitespaceOnlyChanges": true,
+  "github.copilot.nextEditSuggestions.extendedRange": true,
+  "github.copilot.nextEditSuggestions.fixes": true,
+  "github.copilot.chat.agent.autoFix": false,
+  "github.copilot.chat.recordVideoSkill.enabled": false
+}

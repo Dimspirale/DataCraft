@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "DataCraft: install dev dependencies",
+      "type": "shell",
+      "command": "python -m pip install -r requirements-dev.txt",
+      "problemMatcher": []
+    },
+    {
+      "label": "DataCraft: validate DC-001",
+      "type": "shell",
+      "command": "python scripts/validate_dc001.py",
+      "group": "test",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      }
+    },
+    {
+      "label": "DataCraft: unit tests",
+      "type": "shell",
+      "command": "python -m unittest discover -s tests -p \"test_*.py\"",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": false
+      }
+    },
+    {
+      "label": "DataCraft: BUILD-00 validation",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "DataCraft: validate DC-001",
+        "DataCraft: unit tests"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
