@@ -1,0 +1,41 @@
+responsibility_assignments:
+  - handle: RA-MODEL-001
+    scope: model.canonical
+    responsibility: maintain_canonical_model
+    responsible_role: MODEL_OWNER
+    accountable_role: MODEL_OWNER
+    consulted_roles: [GOVERNANCE_OWNER, IMPLEMENTATION_OWNER, MIG_ARCHIVE_OWNER]
+    informed_roles: [PROJECT_OWNER]
+    project: null
+    assignment_status: ACTIVE
+    provenance: ARCH
+  - handle: RA-IMPL-001
+    scope: implementation
+    responsibility: maintain_implementations_integrations_and_providers
+    responsible_role: IMPLEMENTATION_OWNER
+    accountable_role: IMPLEMENTATION_OWNER
+    consulted_roles: [MODEL_OWNER, GOVERNANCE_OWNER]
+    informed_roles: [PROJECT_OWNER, MIG_ARCHIVE_OWNER]
+    project: null
+    assignment_status: ACTIVE
+    provenance: IMPLEMENTATION
+  - handle: RA-GOV-001
+    scope: governance
+    responsibility: maintain_governance_policy_information_and_evidence
+    responsible_role: GOVERNANCE_OWNER
+    accountable_role: GOVERNANCE_OWNER
+    consulted_roles: [MODEL_OWNER, PROJECT_OWNER, IMPLEMENTATION_OWNER]
+    informed_roles: [MIG_ARCHIVE_OWNER]
+    project: null
+    assignment_status: ACTIVE
+    provenance: GOVERNANCE
+  - handle: RA-MIG-001
+    scope: migration
+    responsibility: maintain_migrations_retention_and_archives
+    responsible_role: MIG_ARCHIVE_OWNER
+    accountable_role: MIG_ARCHIVE_OWNER
+    consulted_roles: [MODEL_OWNER, PROJECT_OWNER, IMPLEMENTATION_OWNER, GOVERNANCE_OWNER]
+    informed_roles: []
+    project: null
+    assignment_status: ACTIVE
+    provenance: MIG

@@ -1,0 +1,11 @@
+responsibility_roles:
+  MODEL_OWNER:
+    responsibilities: [canonical_model, architecture_invariants, identity, profile_capability_skill]
+  PROJECT_OWNER:
+    responsibilities: [project, project_scope, responsibility_assignments, coordination]
+  IMPLEMENTATION_OWNER:
+    responsibilities: [implementation, integration, providers, software_inventory, technical_execution]
+  GOVERNANCE_OWNER:
+    responsibilities: [policy, documents, resources, knowledge, controls, evaluation, evidence]
+  MIG_ARCHIVE_OWNER:
+    responsibilities: [migration, archive, retention, deprecation]
