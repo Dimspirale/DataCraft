@@ -1,0 +1,15 @@
+capabilities:
+  - handle: CAP-INGEST-CAD-DATA
+    id: IngestCADData
+    profile: PROFILE-CAD
+    provider: null
+
+  - handle: CAP-OPTIMIZE-CAD-DATA
+    id: OptimizeCADData
+    profile: PROFILE-CAD
+    provider: null
+
+  - handle: CAP-EXPORT-CAD-DATA
+    id: ExportCADData
+    profile: PROFILE-CAD
+    provider: null

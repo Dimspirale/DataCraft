@@ -1,0 +1,6 @@
+profiles:
+  - handle: PROFILE-CAD
+    id: CAD
+    provenance:
+      legacy_object: AG01000_CAD
+      migration: MIG-AG-CAD-001

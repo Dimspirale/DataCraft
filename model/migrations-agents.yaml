@@ -1,0 +1,23 @@
+migrations:
+  - handle: MIG-AG-CAD-001
+    migration_type: LEGACY_1_TO_N
+    source:
+      legacy_id: AG01000_CAD
+      legacy_kind: AGENT
+    decision: INVALIDATE_REMAP
+    targets:
+      profiles:
+        - PROFILE-CAD
+      capabilities:
+        - CAP-INGEST-CAD-DATA
+        - CAP-OPTIMIZE-CAD-DATA
+        - CAP-EXPORT-CAD-DATA
+      skills: []
+    invariants:
+      - PROFILE_NOT_AGENT
+      - CAPABILITY_NOT_PROVIDER
+      - NO_ALIAS_FOR_1_TO_N
+      - NO_IMPLICIT_AUTHORITY
+    provenance:
+      - BLOC_2_METIER_PROJETS
+      - HISTORICAL_AGENT_REGISTRY
