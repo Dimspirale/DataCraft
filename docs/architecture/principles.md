@@ -38,27 +38,51 @@
 25. Installed != Integrated != Validated != Supported ; UNKNOWN != SUPPORTED.
 26. SchemaValid != ModelValid != RuntimeAuthorized.
 27. Observation != Evaluation ; Evaluation != Policy.
+28. Interface != Protocol != Capability.
+29. Model-valid relationship != Observed relationship != Validated Knowledge.
+30. Semantic consistency != Factual truth.
+31. Dashboard != State != Evidence.
+32. Log != Metric != Trace != Evidence ; ces signaux peuvent contribuer à produire ou étayer de l'EVIDENCE.
+33. Available Library != Required Dependency.
+34. Popular Technology != Architectural Requirement.
 
 ## Exécution et ALC
 
-28. POLICY peut conduire notamment à ALLOW_AUTO, REQUIRE_APPROVAL, DRY_RUN_ONLY ou DENY.
-29. ALC est un pattern d'orchestration, pas une primitive Core : `RESOLVE -> POLICY -> EXECUTE -> OBSERVE -> EVALUATE -> DISPOSE`.
-30. Dispositions possibles : COMPLETE, CONTINUE, RETRY, REPLAN, ESCALATE, ABORT.
-31. RETRY != REPLAN ; une nouvelle action à effet de bord issue d'un REPLAN repasse par POLICY.
-32. Une boucle agentique est bornée explicitement ; elle ne modifie jamais automatiquement sa propre POLICY.
-33. DRY_RUN != SHADOW_MODE ; Shadow Decision != Authorized Execution.
+35. POLICY peut conduire notamment à ALLOW_AUTO, REQUIRE_APPROVAL, DRY_RUN_ONLY ou DENY.
+36. ALC est un pattern d'orchestration, pas une primitive Core : `RESOLVE -> POLICY -> EXECUTE -> OBSERVE -> EVALUATE -> DISPOSE`.
+37. Dispositions possibles : COMPLETE, CONTINUE, RETRY, REPLAN, ESCALATE, ABORT.
+38. RETRY != REPLAN ; une nouvelle action à effet de bord issue d'un REPLAN repasse par POLICY.
+39. Une boucle agentique est bornée explicitement ; elle ne modifie jamais automatiquement sa propre POLICY.
+40. DRY_RUN != SHADOW_MODE ; Shadow Decision != Authorized Execution.
 
 ## Validation et connaissance
 
-34. L1 Schema Validation vérifie structure, types, enums et invariants locaux.
-35. L2 Model Validation vérifie Registry, références, relations, scopes d'Authority et cohérence du modèle.
-36. L3 Runtime Validation vérifie State réel, PolicyDecision, Permission, Authority, Approval éventuelle, budgets, providers et autorisation effective.
-37. Model Output != Evidence != Memory != Knowledge.
-38. Pipeline d'apprentissage : événement réel -> RUN -> RESULT -> EVIDENCE -> Memory candidate -> qualification -> Memory -> validation/sourcing -> Knowledge candidate -> Knowledge.
+41. L1 Schema Validation vérifie structure, types, enums et invariants locaux.
+42. L2 Model Validation vérifie Registry, références, relations, scopes d'Authority et cohérence du modèle.
+43. L3 Runtime Validation vérifie State réel, PolicyDecision, Permission, Authority, Approval éventuelle, budgets, providers et autorisation effective.
+44. Model Output != Evidence != Memory != Knowledge.
+45. Pipeline d'apprentissage : événement réel -> RUN -> RESULT -> EVIDENCE -> Memory candidate -> qualification -> Memory -> validation/sourcing -> Knowledge candidate -> Knowledge.
+46. Une relation autorisée par le modèle ne constitue pas une affirmation qu'elle existe dans le monde réel.
+47. Une observation ne devient pas automatiquement Knowledge ; sa promotion exige qualification, sourcing et validation adaptés au contexte.
+48. La gouvernance de Knowledge conserve le sens, la provenance, le contexte, le versioning pertinent et l'Authority applicable sans créer une primitive universelle supplémentaire.
+
+## Observabilité
+
+49. L'observabilité est une capacité transverse et une projection sur des responsabilités existantes, pas une nouvelle source de vérité.
+50. Logs, métriques et traces conservent leur nature propre ; aucun n'est automatiquement EVIDENCE.
+51. Les dashboards visualisent ou explorent des données ; ils ne deviennent ni State ni Evidence par leur seule présentation.
+52. Un provider d'observabilité reste remplaçable et sa panne ne doit pas rendre indisponible la fonction primaire des systèmes métier.
+
+## Intégrations et dépendances
+
+53. MCP, API, CLI, OSC et mécanismes similaires restent des protocoles/interfaces ou implémentations d'intégration ; ils ne deviennent pas des primitives Core.
+54. Une base vectorielle, un moteur RAG, un framework agentique, un serveur API ou un outil d'observabilité n'entre dans le runtime que si une CAPABILITY concrète le justifie.
+55. CAPABILITY != Library ; SKILL != Library ; Provider != Library.
+56. La popularité d'une technologie, sa présence dans un stack de référence ou sa disponibilité locale ne justifient ni son installation ni son intégration.
 
 ## Développement
 
-39. Le repository Git est la référence versionnée du projet.
-40. Progression privilégiée : prototype -> DRY_RUN -> SHADOW_MODE -> controlled execution -> EVIDENCE -> evaluation.
-41. Petite modification -> validation -> test -> commit -> utilisation -> Evidence -> décision suivante.
-42. Pour v0.0.1, la solution minimale testable et réversible prime sur la sophistication prématurée.
+57. Le repository Git est la référence versionnée du projet.
+58. Progression privilégiée : prototype -> DRY_RUN -> SHADOW_MODE -> controlled execution -> EVIDENCE -> evaluation.
+59. Petite modification -> validation -> test -> commit -> utilisation -> Evidence -> décision suivante.
+60. Pour v0.0.1, la solution minimale testable et réversible prime sur la sophistication prématurée.
